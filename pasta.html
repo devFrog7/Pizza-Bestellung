@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta - Pizza Ordering Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-custom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+        <div class="container">
+            <div class="navbar-nav mx-auto">
+                <!-- First Row -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-2">
+                    <!-- Burger Category -->
+                    <div class="category-item">
+                        <a href="burger.html" class="text-decoration-none">
+                            <div class="category-background bg-burger">
+                                <img src="img/Burger.png" alt="Burger" class="category-image">
+                                <span class="category-label">Burger</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Pizza Category -->
+                    <div class="category-item">
+                        <a href="pizza.html" class="text-decoration-none">
+                            <div class="category-background bg-pizza">
+                                <img src="img/Salami.png" alt="Pizza" class="category-image">
+                                <span class="category-label">Pizza</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Hotdog Category -->
+                    <div class="category-item">
+                        <a href="hotdog.html" class="text-decoration-none">
+                            <div class="category-background bg-hotdog">
+                                <img src="img/HotDog.png" alt="Hotdog" class="category-image">
+                                <span class="category-label">Hotdog</span>
+                            </div>
+                        </a>
+                    </div>
+                
+                
+                    <!-- Hauptspeisen Category -->
+                    <div class="category-item">
+                        <a href="hauptspeisen.html" class="text-decoration-none">
+                            <div class="category-background bg-hauptspeisen">
+                                <img src="img/Stake.webp" alt="Hauptspeisen" class="category-image">
+                                <span class="category-label">Hauptspeisen</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Pasta Category -->
+                    <div class="category-item">
+                        <div class="category-background bg-pasta active">
+                            <img src="img/SpaghettiGar.webp" alt="Pasta" class="category-image">
+                            <span class="category-label">Pasta</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Borito Category -->
+                    <div class="category-item">
+                        <a href="borito.html" class="text-decoration-none">
+                            <div class="category-background bg-borito">
+                                <img src="img/Borito.webp" alt="Borito" class="category-image">
+                                <span class="category-label">Borito</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-black text-center py-4">
+        <h1>Pasta</h1>
+    </header>
+
+    <main class="container my-5">
+        <section id="menu" class="mb-5">
+            <h2 class="text-center mb-4">Bitte wählen Sie Ihre Pasta aus:</h2>
+            
+            <!-- Pasta Carousel -->
+            <div id="pastaCarousel" class="carousel slide category-carousel" data-bs-ride="false">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pastaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#pastaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <!-- Slide 1: Spaghetti Aglio e Olio & Spaghetti Chicken -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <!-- Spaghetti Aglio e Olio -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('aglio')">
+                                            <div class="col-4">
+                                                <img src="img/SpaghettiGar.webp" class="card-img-left" alt="Spaghetti Aglio e Olio">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Spaghetti Aglio e Olio</h5>
+                                                    <p class="card-text">Klassische italienische Pasta mit Knoblauch, Olivenöl, Petersilie und Chili.</p>
+                                                    <p class="card-price"><strong>Preis: 9,50 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="aglio-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="aglioExtraParmesan">
+                                                            <label class="form-check-label" for="aglioExtraParmesan">
+                                                                Parmesan (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.00" id="aglioExtraGarlic">
+                                                            <label class="form-check-label" for="aglioExtraGarlic">
+                                                                Extra Knoblauch (+1,00 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="0.75" id="aglioExtraChili">
+                                                            <label class="form-check-label" for="aglioExtraChili">
+                                                                Extra Chili (+0,75 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="aglioExtraParsley">
+                                                            <label class="form-check-label" for="aglioExtraParsley">
+                                                                Frische Petersilie (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="aglioQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="aglioQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Spaghetti Aglio e Olio" 
+                                                            data-price="9.50" 
+                                                            data-quantity-id="aglioQuantity" 
+                                                            data-extras-group="aglio">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Spaghetti Chicken -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('chicken-pasta')">
+                                            <div class="col-4">
+                                                <img src="img/spaghettiChicken.webp" class="card-img-left" alt="Spaghetti Chicken">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Spaghetti mit Hähnchen</h5>
+                                                    <p class="card-text">Cremige Spaghetti mit saftigem Hähnchenfleisch und einer aromatischen Sahnesauce.</p>
+                                                    <p class="card-price"><strong>Preis: 12,90 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="chicken-pasta-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.00" id="chickenPastaExtraChicken">
+                                                            <label class="form-check-label" for="chickenPastaExtraChicken">
+                                                                Extra Hähnchen (+2,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="chickenPastaExtraCream">
+                                                            <label class="form-check-label" for="chickenPastaExtraCream">
+                                                                Extra Sahne (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.00" id="chickenPastaExtraMushrooms">
+                                                            <label class="form-check-label" for="chickenPastaExtraMushrooms">
+                                                                Champignons (+1,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="chickenPastaExtraParmesan">
+                                                            <label class="form-check-label" for="chickenPastaExtraParmesan">
+                                                                Parmesan (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="chickenPastaQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="chickenPastaQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Spaghetti mit Hähnchen" 
+                                                            data-price="12.90" 
+                                                            data-quantity-id="chickenPastaQuantity" 
+                                                            data-extras-group="chicken-pasta">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Lasagne & Penne Arrabiata -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <!-- Lasagne -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('lasagne')">
+                                            <div class="col-4">
+                                                <img src="img/lasagne.webp" class="card-img-left" alt="Lasagne">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Lasagne Bolognese</h5>
+                                                    <p class="card-text">Hausgemachte Lasagne mit Hackfleischsauce, Béchamel und viel Käse überbacken.</p>
+                                                    <p class="card-price"><strong>Preis: 13,50 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="lasagne-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.00" id="lasagneExtraCheese">
+                                                            <label class="form-check-label" for="lasagneExtraCheese">
+                                                                Extra Käse (+2,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="lasagneExtraMeat">
+                                                            <label class="form-check-label" for="lasagneExtraMeat">
+                                                                Extra Hackfleisch (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="3.00" id="lasagneExtraSalad">
+                                                            <label class="form-check-label" for="lasagneExtraSalad">
+                                                                Beilagensalat (+3,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="lasagneExtraBread">
+                                                            <label class="form-check-label" for="lasagneExtraBread">
+                                                                Knoblauchbrot (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="lasagneQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="lasagneQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Lasagne Bolognese" 
+                                                            data-price="13.50" 
+                                                            data-quantity-id="lasagneQuantity" 
+                                                            data-extras-group="lasagne">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Penne Arrabiata -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('arrabiata')">
+                                            <div class="col-4">
+                                                <img src="img/SpaghettiGar.webp" class="card-img-left" alt="Penne Arrabiata">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Penne Arrabiata</h5>
+                                                    <p class="card-text">Scharfe Penne mit Tomatensauce, Knoblauch, Chili und frischen Kräutern.</p>
+                                                    <p class="card-price"><strong>Preis: 10,50 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="arrabiata-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.00" id="arrabiataExtraChili">
+                                                            <label class="form-check-label" for="arrabiataExtraChili">
+                                                                Extra Chili (+1,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="arrabiataExtraGarlic">
+                                                            <label class="form-check-label" for="arrabiataExtraGarlic">
+                                                                Extra Knoblauch (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="arrabiataExtraParmesan">
+                                                            <label class="form-check-label" for="arrabiataExtraParmesan">
+                                                                Parmesan (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.25" id="arrabiataExtraBasil">
+                                                            <label class="form-check-label" for="arrabiataExtraBasil">
+                                                                Frisches Basilikum (+1,25 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="arrabiataQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="arrabiataQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Penne Arrabiata" 
+                                                            data-price="10.50" 
+                                                            data-quantity-id="arrabiataQuantity" 
+                                                            data-extras-group="arrabiata">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#pastaCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pastaCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>        </section>
+
+        <section id="order-form" class="mb-5 p-4 rounded shadow-lg bg-dark">
+            <h2 class="mb-4 text-center">Bestellung abschließen</h2>
+            <div class="row">
+                <!-- Left Column: Customer Information -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <h4 class="mb-0">Lieferinformationen</h4>
+                        </div>
+                        <div class="card-body">                            <form id="customer-form">
+                                <div class="mb-3">
+                                    <label for="customerName" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="customerName" value="Max Mustermann" placeholder="Vorname Nachname" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="customerEmail" class="form-label">E-Mail *</label>
+                                    <input type="email" class="form-control" id="customerEmail" value="max.mustermann@email.de" placeholder="max@example.com" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="customerPhone" class="form-label">Telefon *</label>
+                                    <input type="tel" class="form-control" id="customerPhone" value="0176 12345678" placeholder="0123 456789" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="deliveryAddress" class="form-label">Lieferadresse *</label>
+                                    <textarea class="form-control" id="deliveryAddress" rows="3" placeholder="Straße, Hausnummer&#10;PLZ Ort" required>Musterstraße 123
+12345 Musterstadt</textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="orderNotes" class="form-label">Anmerkungen (optional)</label>
+                                    <textarea class="form-control" id="orderNotes" rows="2" placeholder="Besondere Wünsche oder Anweisungen..."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="card bg-light">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0">Warenkorb</h4>
+                            <button type="button" class="btn btn-outline-danger btn-sm" id="clearCart">
+                                <i class="bi bi-trash"></i> Leeren
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div id="cart-items">
+                                <div class="text-center text-muted py-4">
+                                    <i class="bi bi-cart3 fs-1"></i>
+                                    <p class="mt-2">Ihr Warenkorb ist leer</p>
+                                    <small>Wählen Sie Produkte aus, um sie hier zu sehen</small>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <strong>Gesamtpreis:</strong>
+                                <strong class="text-warning" id="total-price">0,00 €</strong>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-warning btn-lg" id="submit-order" disabled>
+                                    <i class="bi bi-check-circle"></i> Bestellung abschicken
+                                </button>
+                                <small class="text-muted text-center">
+                                    * Pflichtfelder müssen ausgefüllt werden
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Pizza Ordering Website. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript for interactive elements --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

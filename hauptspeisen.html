@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hauptspeisen - Pizza Ordering Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-custom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+        <div class="container">
+            <div class="navbar-nav mx-auto">
+                <!-- First Row -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-2">
+                    <!-- Burger Category -->
+                    <div class="category-item">
+                        <a href="burger.html" class="text-decoration-none">
+                            <div class="category-background bg-burger">
+                                <img src="img/Burger.png" alt="Burger" class="category-image">
+                                <span class="category-label">Burger</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Pizza Category -->
+                    <div class="category-item">
+                        <a href="pizza.html" class="text-decoration-none">
+                            <div class="category-background bg-pizza">
+                                <img src="img/Salami.png" alt="Pizza" class="category-image">
+                                <span class="category-label">Pizza</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Hotdog Category -->
+                    <div class="category-item">
+                        <a href="hotdog.html" class="text-decoration-none">
+                            <div class="category-background bg-hotdog">
+                                <img src="img/HotDog.png" alt="Hotdog" class="category-image">
+                                <span class="category-label">Hotdog</span>
+                            </div>
+                        </a>
+                    </div>
+                
+                
+                    <!-- Hauptspeisen Category -->
+                    <div class="category-item">
+                        <div class="category-background bg-hauptspeisen active">
+                            <img src="img/Stake.webp" alt="Hauptspeisen" class="category-image">
+                            <span class="category-label">Hauptspeisen</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Pasta Category -->
+                    <div class="category-item">
+                        <a href="pasta.html" class="text-decoration-none">
+                            <div class="category-background bg-pasta">
+                                <img src="img/SpaghettiGar.webp" alt="Pasta" class="category-image">
+                                <span class="category-label">Pasta</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Borito Category -->
+                    <div class="category-item">
+                        <a href="borito.html" class="text-decoration-none">
+                            <div class="category-background bg-borito">
+                                <img src="img/Borito.webp" alt="Borito" class="category-image">
+                                <span class="category-label">Borito</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-black text-center py-4">
+        <h1>Hauptspeisen</h1>
+    </header>
+
+    <main class="container my-5">
+        <section id="menu" class="mb-5">
+            <h2 class="text-center mb-4">Bitte wählen Sie Ihre Hauptspeise aus:</h2>
+            
+            <!-- Hauptspeisen Carousel -->
+            <div id="hauptspeisenCarousel" class="carousel slide category-carousel" data-bs-ride="false">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#hauptspeisenCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#hauptspeisenCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <!-- Slide 1: Steak & Fish -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <!-- Steak -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('steak')">
+                                            <div class="col-4">
+                                                <img src="img/Stake.webp" class="card-img-left" alt="Steak">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Premium Steak</h5>
+                                                    <p class="card-text">Saftiges Rindersteak vom Grill, serviert mit Beilage Ihrer Wahl und frischem Gemüse.</p>
+                                                    <p class="card-price"><strong>Preis: 18,90 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="steak-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="3.50" id="steakExtraSauce">
+                                                            <label class="form-check-label" for="steakExtraSauce">
+                                                                Pfeffersauce (+3,50 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="steakExtraVeggies">
+                                                            <label class="form-check-label" for="steakExtraVeggies">
+                                                                Extra Gemüse (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="4.00" id="steakExtraPotatoes">
+                                                            <label class="form-check-label" for="steakExtraPotatoes">
+                                                                Röstkartoffeln (+4,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.00" id="steakExtraHerbs">
+                                                            <label class="form-check-label" for="steakExtraHerbs">
+                                                                Kräuterbutter (+2,00 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="steakQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="steakQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Premium Steak" 
+                                                            data-price="18.90" 
+                                                            data-quantity-id="steakQuantity" 
+                                                            data-extras-group="steak">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fish -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('fish')">
+                                            <div class="col-4">
+                                                <img src="img/Fisch.webp" class="card-img-left" alt="Fish">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Gegrillter Lachs</h5>
+                                                    <p class="card-text">Frischer Lachs vom Grill mit Zitronenbutter und saisonalem Gemüse.</p>
+                                                    <p class="card-price"><strong>Preis: 16,50 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="fish-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="fishExtraLemon">
+                                                            <label class="form-check-label" for="fishExtraLemon">
+                                                                Extra Zitrone (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="3.00" id="fishExtraRice">
+                                                            <label class="form-check-label" for="fishExtraRice">
+                                                                Jasminreis (+3,00 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.00" id="fishExtraDill">
+                                                            <label class="form-check-label" for="fishExtraDill">
+                                                                Dillsauce (+2,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="fishExtraCapers">
+                                                            <label class="form-check-label" for="fishExtraCapers">
+                                                                Kapern (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="fishQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="fishQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Gegrillter Lachs" 
+                                                            data-price="16.50" 
+                                                            data-quantity-id="fishQuantity" 
+                                                            data-extras-group="fish">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Cheesesteak & Chicken -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <!-- Cheesesteak -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('cheesesteak')">
+                                            <div class="col-4">
+                                                <img src="img/Cheesesteak.png" class="card-img-left" alt="Cheesesteak">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Philly Cheesesteak</h5>
+                                                    <p class="card-text">Klassisches amerikanisches Sandwich mit zartem Rindfleisch und geschmolzenem Käse.</p>
+                                                    <p class="card-price"><strong>Preis: 12,90 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="cheesesteak-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="chesesteakExtraCheese">
+                                                            <label class="form-check-label" for="chesesteakExtraCheese">
+                                                                Extra Käse (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.00" id="chesesteakExtraOnions">
+                                                            <label class="form-check-label" for="chesesteakExtraOnions">
+                                                                Zwiebeln (+1,00 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="0.75" id="chesesteakExtraPeppers">
+                                                            <label class="form-check-label" for="chesesteakExtraPeppers">
+                                                                Paprika (+0,75 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.50" id="chesesteakExtraFries">
+                                                            <label class="form-check-label" for="chesesteakExtraFries">
+                                                                Pommes (+2,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="chesesteakQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="chesesteakQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Philly Cheesesteak" 
+                                                            data-price="12.90" 
+                                                            data-quantity-id="chesesteakQuantity" 
+                                                            data-extras-group="cheesesteak">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chicken Special -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pizza-card-carousel">
+                                    <div class="card h-100 pizza-card" >
+                                        <div class="row g-0" onclick="toggleExtras('chicken')">
+                                            <div class="col-4">
+                                                <img src="img/spaghettiChicken.webp" class="card-img-left" alt="Chicken">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Hähnchenbrust Spezial</h5>
+                                                    <p class="card-text">Saftige Hähnchenbrust mit aromatischen Kräutern und einer Auswahl an frischen Beilagen.</p>
+                                                    <p class="card-price"><strong>Preis: 14,50 €</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Extras Section (initially hidden) -->
+                                        <div class="extras-section" id="chicken-extras" style="display: none;">
+                                            <div class="card-body border-top">
+                                                <h6 class="fw-bold mb-3">Extras hinzufügen:</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="2.00" id="chickenExtraBacon">
+                                                            <label class="form-check-label" for="chickenExtraBacon">
+                                                                Speck (+2,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.50" id="chickenExtraHerbs">
+                                                            <label class="form-check-label" for="chickenExtraHerbs">
+                                                                Kräutermischung (+1,50 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="3.00" id="chickenExtraSalad">
+                                                            <label class="form-check-label" for="chickenExtraSalad">
+                                                                Gemischter Salat (+3,00 €)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input" type="checkbox" value="1.75" id="chickenExtraSauce">
+                                                            <label class="form-check-label" for="chickenExtraSauce">
+                                                                BBQ Sauce (+1,75 €)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                                    <div>
+                                                        <label for="chickenQuantity" class="form-label me-2">Anzahl:</label>
+                                                        <input type="number" class="form-control form-control-sm d-inline-block" style="width: 80px;" id="chickenQuantity" value="1" min="1" max="10">
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning add-to-cart-btn" 
+                                                            data-product="Hähnchenbrust Spezial" 
+                                                            data-price="14.50" 
+                                                            data-quantity-id="chickenQuantity" 
+                                                            data-extras-group="chicken">
+                                                        <i class="bi bi-cart-plus"></i> In den Einkaufswagen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#hauptspeisenCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hauptspeisenCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="order-form" class="mb-5 p-4 rounded shadow-lg bg-dark">
+            <h2 class="mb-4 text-center">Bestellung abschließen</h2>
+            <div class="row">
+                <!-- Left Column: Customer Information -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <h4 class="mb-0">Lieferinformationen</h4>
+                        </div>
+                        <div class="card-body">                            <form id="customer-form">
+                                <div class="mb-3">
+                                    <label for="customerName" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="customerName" value="Max Mustermann" placeholder="Vorname Nachname" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="customerEmail" class="form-label">E-Mail *</label>
+                                    <input type="email" class="form-control" id="customerEmail" value="max.mustermann@email.de" placeholder="max@example.com" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="customerPhone" class="form-label">Telefon *</label>
+                                    <input type="tel" class="form-control" id="customerPhone" value="0176 12345678" placeholder="0123 456789" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="deliveryAddress" class="form-label">Lieferadresse *</label>
+                                    <textarea class="form-control" id="deliveryAddress" rows="3" placeholder="Straße, Hausnummer&#10;PLZ Ort" required>Musterstraße 123
+12345 Musterstadt</textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="orderNotes" class="form-label">Anmerkungen (optional)</label>
+                                    <textarea class="form-control" id="orderNotes" rows="2" placeholder="Besondere Wünsche oder Anweisungen..."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="card bg-light">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0">Warenkorb</h4>
+                            <button type="button" class="btn btn-outline-danger btn-sm" id="clearCart">
+                                <i class="bi bi-trash"></i> Leeren
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div id="cart-items">
+                                <div class="text-center text-muted py-4">
+                                    <i class="bi bi-cart3 fs-1"></i>
+                                    <p class="mt-2">Ihr Warenkorb ist leer</p>
+                                    <small>Wählen Sie Produkte aus, um sie hier zu sehen</small>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <strong>Gesamtpreis:</strong>
+                                <strong class="text-warning" id="total-price">0,00 €</strong>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-warning btn-lg" id="submit-order" disabled>
+                                    <i class="bi bi-check-circle"></i> Bestellung abschicken
+                                </button>
+                                <small class="text-muted text-center">
+                                    * Pflichtfelder müssen ausgefüllt werden
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Pizza Ordering Website. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript for interactive elements --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

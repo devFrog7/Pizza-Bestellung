@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="small-screen-message">
+        <h1>Screen Too Small</h1>
+        <p>Please use a device with a larger screen to access this content.</p>
+    </div>
+
+    <div class="border">
+        <div class="content">
+            <div class="swing1">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="login-body">
+                        <form action="index.html" method="GET">
+                            <div class="form-group-top">
+                                <label for="login-username">Username:</label>
+                                <input type="text" id="login-username" name="username" required value="testuser">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password:</label>
+                                <input type="password" id="login-password" name="password" required value="password123">
+                            </div>
+                            <div class="form-group-bottom">
+                                <button class="btn" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="#" class="register-link">Register here</a></p>
+                        <p>Forgot your password? <a href="#" class="forgot-password-link">Reset it</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swing2">
+                <div class="register-container">
+                    <div class="register-header">
+                        <h1>Register</h1>
+                    </div>
+                    <div class="register-body">
+                        <form action="index.html" method="GET">
+                            <div class="form-group-top">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required value="newuser">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required value="new@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required value="newpassword456">
+                            </div>
+                            <div class="form-group-bottom">
+                                <button class="btn" type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="register-footer">
+                        <p>Already have an account? <a href="#" class="login-link">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swing3">
+                <div class="info-container">
+                    <div class="login-info" style="display: none;">
+                        <div class="info-header">
+                            <h1>Pizza Zeit!</h1>
+                        </div>
+                        <div class="info-body">
+                            <p>Melde dich an, um deine Lieblingspizza erneut zu bestellen oder neue Beläge zu entdecken.</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                                <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                            </svg>
+                        </div>
+                        <div class="info-footer">
+                            <p>Deine Pizza-Vorlieben sind bei uns sicher.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="register-info">
+                        <div class="info-header">
+                            <h1>Hungrig? Registriere dich jetzt!</h1>
+                        </div>
+                        <div class="info-body">
+                            <p>Erstelle ein Konto, um deine Bestellungen zu speichern und einen schnelleren Checkout zu genießen.</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                                <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                            </svg>
+                        </div>
+                        <div class="info-footer">
+                            <p>Ran an den Teig!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

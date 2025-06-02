@@ -1,0 +1,965 @@
+/* Background for index page only */
+body.bg-gradient-custom.index-page {
+    background-image: url('../img/Back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Background for category pages */
+body.bg-gradient-custom {
+    background: #eda839;
+    background: linear-gradient(160deg, rgb(236, 209, 164) 0%, rgb(248, 247, 245) 50%, rgb(190, 136, 64) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h5 {
+    font-size: 1.5rem;
+}
+
+.card {
+    background: linear-gradient(150deg, rgba(237, 168, 57, 1) 20%, #ffffff 100%) !important;
+    border: none; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    margin: 15px 0 20px 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+.card-img-top {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); 
+}
+
+#order-form {
+    background: linear-gradient(180deg, rgba(237, 168, 57, 1) 0%, rgba(230, 126, 0, 1) 100%);
+    border: none;
+}
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .confirmation-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .confirmation-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .order-details p {
+            margin-bottom: 10px;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        .total-price {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: right;
+            margin-top: 20px;
+        }        /* Navbar Category Styles */
+.navbar {
+    padding: 20px 0;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 50%, rgba(230, 126, 0, 1) 100%) !important;
+    box-shadow: #333 0px 0px 10px 0px;
+}
+
+.category-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.category-item:hover {
+    transform: translateY(-8px);
+}
+
+.category-background {
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 140px;
+    height: 140px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Active category state */
+.category-background.active {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.9) 0%, rgba(255, 165, 0, 0.9) 100%);
+    box-shadow: 0 8px 16px rgba(255, 140, 0, 0.4);
+    border: 2px solid rgba(255, 140, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.category-background.active .category-label {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.category-background:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.category-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.category-label {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+}
+
+/* Responsive Navbar Navigation Layout */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex.justify-content-center {
+    flex-wrap: wrap;
+    gap: 0.75rem !important;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+}
+
+/* Pastel Background Colors */
+.bg-burger {
+    background: linear-gradient(135deg, #FFE5E5, #FFD1D1); /* Soft Pink */
+}
+
+.bg-pizza {
+    background: linear-gradient(135deg, #E5F3FF, #D1E8FF); /* Soft Blue */
+}
+
+.bg-hotdog {
+    background: linear-gradient(135deg, #FFF5E5, #FFEDD1); /* Soft Orange */
+}
+
+.bg-hauptspeisen {
+    background: linear-gradient(135deg, #E5FFE5, #D1FFD1); /* Soft Green */
+}
+
+.bg-pasta {
+    background: linear-gradient(135deg, #F0E5FF, #E8D1FF); /* Soft Purple */
+}
+
+.bg-borito {
+    background: linear-gradient(135deg, #FFFFE5, #FFFFD1); /* Soft Yellow */
+}
+
+/* Pizza Card Styles */
+.pizza-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.pizza-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    z-index: 10;
+}
+
+.pizza-card .col-4 {
+    overflow: visible;
+    position: relative;
+}
+
+.card-img-left {
+    width: 120%;
+    height: auto;
+    min-height: 140px;
+    object-fit: contain;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    left: -10%;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.pizza-card:hover .card-img-left {
+    transform: scale(1.05);
+    left: -15%;
+}
+
+.card-price {
+    color: #e67e22;
+    font-size: 1.1em;
+    margin-bottom: 0;
+    background-color: rgba(255, 140, 0, 0.3);
+    width: fit-content;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border:rgba(255, 140, 0, 0.6) 2px solid;
+}
+
+.extras-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 300px;
+    }
+}
+
+.extras-section.hiding {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        max-height: 300px;
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+
+/* Form styling in cards */
+.extras-section .form-check-input:checked {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.extras-section .btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    font-weight: 600;
+}
+
+.extras-section .btn-warning:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    transform: translateY(-1px);
+}
+
+/* Category Carousel Styles */
+.pizza-card-carousel {
+    max-width: 100%;
+    width: 100%;
+}
+
+.category-carousel {
+    margin: 40px 100px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.category-carousel .carousel-indicators {
+    margin-bottom: -50px;
+    padding: 10px 0;
+}
+
+.category-carousel .carousel-indicators button {
+    background-color: #faf9f8;
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.category-carousel .carousel-indicators button.active,
+.category-carousel .carousel-indicators button:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.category-carousel .carousel-control-prev,
+.category-carousel .carousel-control-next {
+    width: 60px;
+    background: rgba(255, 140, 0, 0.8);
+    border-radius: 50%;
+    margin: 0;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #ff8c00;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.category-carousel .carousel-control-prev {
+    left: -80px;
+}
+
+.category-carousel .carousel-control-next {
+    right: -80px;
+}
+
+.category-carousel .carousel-control-prev:hover,
+.category-carousel .carousel-control-next:hover {
+    background: rgba(255, 140, 0, 1);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.5);
+}
+
+.category-carousel .carousel-control-prev-icon,
+.category-carousel .carousel-control-next-icon {
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Text Overlay Styles for better readability on background images */
+.hero-text-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text-overlay h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.hero-text-overlay .lead {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.3rem;
+}
+
+.content-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-overlay h2 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.content-overlay p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Navbar Styles */
+#first_row {
+
+}
+#second_row {
+
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .category-background {
+        padding: 12px 20px;
+        min-width: 120px;
+        height: 120px;
+        margin: 3px;
+    }
+    
+    .category-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .category-label {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 12px 0;
+    }
+    
+    .d-flex.justify-content-center {
+        justify-content: center !important;
+        gap: 0.5rem !important;
+    }
+    
+    .category-background {
+        padding: 10px 15px;
+        min-width: 100px;
+        height: 100px;
+        margin: 2px;
+    }
+    
+    .category-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .category-label {
+        font-size: 14px;
+    }
+    
+    .category-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text-overlay {
+        padding: 20px 25px;
+        margin: 0 20px;
+    }
+    
+    .hero-text-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-text-overlay .lead {
+        font-size: 1.1rem;
+    }
+    
+    .content-overlay {
+        padding: 20px 25px;
+        margin: 15px 10px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .d-flex.justify-content-center {
+        justify-content: center !important;
+        gap: 0.3rem !important;
+        flex-wrap: wrap;
+    }
+    
+    .category-background {
+        padding: 8px 12px;
+        min-width: 85px;
+        height: 85px;
+        margin: 2px;
+        border-radius: 15px;
+    }
+    
+    .category-image {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    
+    .category-label {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    
+    .category-item {
+        margin-bottom: 5px;
+    }
+    
+    .category-item:hover {
+        transform: translateY(-3px);
+    }
+    
+    /* Carousel Card Responsive Styles */
+    .pizza-card {
+        margin-bottom: 15px;
+    }
+    
+    .card-img-left {
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+        left: 0;
+        border-radius: 8px 8px 0 0;
+        position: static;
+    }
+    
+    .pizza-card .row.g-0 {
+        flex-direction: column;
+    }
+    
+    .pizza-card .col-4,
+    .pizza-card .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .card-price {
+        font-size: 1rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .extras-section .row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .pizza-card-carousel {
+        max-width: 100%;
+    }
+    
+    .category-carousel {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    
+    .category-carousel .carousel-control-prev,
+    .category-carousel .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .category-carousel .carousel-control-prev {
+        left: -60px;
+    }
+    
+    .category-carousel .carousel-control-next {
+        right: -60px;
+    }
+    
+    .category-carousel .carousel-control-prev-icon,
+    .category-carousel .carousel-control-next-icon {
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    /* On tablets, show cards vertically stacked */
+    .category-carousel .row .col-lg-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text-overlay {
+        padding: 15px 20px;
+        margin: 0 15px;
+    }
+    
+    .hero-text-overlay h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text-overlay .lead {
+        font-size: 1rem;
+    }
+    
+    .content-overlay {
+        padding: 15px 20px;
+        margin: 10px 5px;
+    }
+    
+    .navbar {
+        padding: 8px 0;
+    }
+    
+    .d-flex.justify-content-center {
+        gap: 0.3rem !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    
+    .category-background {
+        min-width: 80px;
+        height: 80px;
+        padding: 6px 10px;
+        border-radius: 12px;
+        margin: 2px;
+    }
+    
+    .category-image {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 4px;
+    }
+    
+    .category-label {
+        font-size: 11px;
+        margin-top: 4px;
+        line-height: 1.1;
+    }
+    
+    .category-item {
+        margin-bottom: 4px;
+    }
+    
+    .category-item:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Mobile Card Layout */
+    .pizza-card .row.g-0 {
+        flex-direction: column;
+    }
+    
+    .pizza-card .col-4,
+    .pizza-card .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .card-img-left {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        border-radius: 8px 8px 0 0;
+        left: 0;
+        position: static;
+        object-fit: cover;
+    }
+    
+    .card-body {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .card-text {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .card-price {
+        font-size: 1.1rem;
+        margin: 10px auto;
+        text-align: center;
+        display: block;
+        width: fit-content;
+    }
+    
+    /* Extras Section Mobile */
+    .extras-section {
+        padding: 15px;
+    }
+    
+    .extras-section .row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .extras-section .d-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .extras-section .form-control {
+        width: 100% !important;
+        text-align: center;
+    }
+    
+    .extras-section .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    /* Carousel Mobile */
+    .pizza-card-carousel {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .category-carousel {
+        max-width: 95%;
+        margin: 20px auto;
+    }
+    
+    .category-carousel .carousel-control-prev,
+    .category-carousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .category-carousel .carousel-control-prev {
+        left: -50px;
+    }
+    
+    .category-carousel .carousel-control-next {
+        right: -50px;
+    }
+    
+    .category-carousel .carousel-indicators {
+        margin-bottom: -30px;
+    }
+    
+    .category-carousel .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+    }
+    
+    /* On mobile, force single column layout */
+    .category-carousel .row .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+/* Extra small screens (smaller phones) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 6px 0;
+    }
+    
+    .d-flex.justify-content-center {
+        gap: 0.2rem !important;
+    }
+    
+    .category-background {
+        min-width: 70px;
+        height: 70px;
+        padding: 4px 7px;
+        border-radius: 10px;
+    }
+    
+    .category-image {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 3px;
+    }
+    
+    .category-label {
+        font-size: 10px;
+        margin-top: 3px;
+    }
+    
+    .category-background.active {
+        transform: scale(1.02);
+    }
+    
+    /* Small Mobile Card Styles */
+    .pizza-card {
+        margin-bottom: 15px;
+    }
+    
+    .card-img-left {
+        min-height: 160px;
+        object-fit: contain;
+        padding: 10px;
+    }
+    
+    .card-body {
+        padding: 12px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .card-price {
+        font-size: 1rem;
+    }
+    
+    .extras-section {
+        padding: 12px;
+    }
+    
+    .extras-section .btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .category-carousel {
+        margin: 15px auto;
+    }
+    
+    .category-carousel .carousel-control-prev,
+    .category-carousel .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .category-carousel .carousel-control-prev {
+        left: -40px;
+    }
+    
+    .category-carousel .carousel-control-next {
+        right: -40px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 4px 0;
+    }
+    
+    .category-background {
+        min-width: 60px;
+        height: 60px;
+        padding: 3px 5px;
+        border-radius: 8px;
+    }
+    
+    .category-image {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 2px;
+    }
+    
+    .category-label {
+        font-size: 9px;
+        margin-top: 2px;
+    }
+    
+    /* Very Small Mobile Card Styles */
+    .card-img-left {
+        min-height: 140px;
+        padding: 8px;
+    }
+    
+    .card-body {
+        padding: 10px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-text {
+        font-size: 0.85rem;
+    }
+    
+    .card-price {
+        font-size: 0.95rem;
+        padding: 4px 8px;
+    }
+    
+    .extras-section {
+        padding: 10px;
+    }
+    
+    .extras-section h6 {
+        font-size: 0.9rem;
+    }
+    
+    .extras-section .form-check-label {
+        font-size: 0.85rem;
+    }
+    
+    .extras-section .btn {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    
+    .category-carousel {
+        margin: 10px auto;
+    }
+    
+    .category-carousel .carousel-control-prev,
+    .category-carousel .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .category-carousel .carousel-control-prev {
+        left: -35px;
+    }
+    
+    .category-carousel .carousel-control-next {
+        right: -35px;
+    }
+    
+    .category-carousel .carousel-control-prev-icon,
+    .category-carousel .carousel-control-next-icon {
+        background-size: 15px 15px;
+        width: 15px;
+        height: 15px;
+    }
+}
